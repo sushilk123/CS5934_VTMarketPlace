@@ -1,8 +1,8 @@
-Doorstep
+VTMarketplace
 ========
-[![Build Status](https://travis-ci.org/mysteryjeans/doorstep.svg?branch=master)](https://travis-ci.org/mysteryjeans/doorstep)
 
-Doorstep is open source e-commerce solution, simplicity in designed is to thrive sales and reduce development effort. Please read the documentation http://doorstep.readthedocs.io
+
+VTMarketplace is open source e-commerce solution, simplicity in designed is to thrive sales and reduce development effort. Please read the documentation 
 
 
 ## Features
@@ -20,25 +20,24 @@ Doorstep is open source e-commerce solution, simplicity in designed is to thrive
 - Cache refresh/invalidation for static contents CSS & JS
 
 
-## Setting up Doorstep e-commerce as Django project
+## Setting up VTMarketplace e-commerce as Django project
 
-[Doorstep demo](https://github.com/mysteryjeans/doorstep-demo) repository is the clone of this project for quickly getting up and running e-commerce site on your local workstation
 
 When you have enough testing on prepopulated data in demo projects, starting your own site from scratch with basic data prepopulated.
 
 Create a new virtualenv for your own e-commerce project
 
 ```
-$ virtualenv doorstep_env && source doorstep_env/bin/activate
+$ virtualenv vtmarketplace_env && source vtmarketplace_env/bin/activate
 ```
 
-Get copy of latest version of Doorstep from Github.
+Get copy of latest version of VTMarketplace from Github.
 
 ```
-$ git clone https://github.com/mysteryjeans/doorstep.git && cd doorstep
+$ git clone https://github.com/mysteryjeans/vtmarketplace.git && cd vtmarketplace
 ```
 
-Install Django and other packages dependencies using requirements.txt in your virtualenv. Doorstep also requires Node.js packages, see details below.
+Install Django and other packages dependencies using requirements.txt in your virtualenv. VTMarketplace also requires Node.js packages, see details below.
 
 ```
 $ pip install -r requirements.txt
@@ -60,29 +59,29 @@ When you have enough testing on prepopulated data in demo projects, starting you
 Create a new virtualenv for your own e-commerce project
 
 ```
-$ virtualenv doorstep_env && source doorstep_env/bin/activate
+$ virtualenv vtmarketplace_env && source vtmarketplace_env/bin/activate
 ```
 
 Install the latest development version from this git repository.
 
 ```
-$ pip install --upgrade git+https://github.com/mysteryjeans/doorstep.git#egg=Doorstep
+$ pip install --upgrade git+https://github.com/mysteryjeans/vtmarketplace.git#egg=vtmarketplace
 ```
 
 Alternatively you can clone repository and export root directory path to python virtualenv site-packages
 
 ```
-$ git clone https://github.com/mysteryjeans/doorstep.git && cd doorstep
-$ echo $(pwd) > ../doorstep_env/lib/python2.7/site-packages/doorstep.pth
+$ git clone https://github.com/mysteryjeans/vtmarketplace.git && cd vtmarketplace
+$ echo $(pwd) > ../vtmarketplace_env/lib/python2.7/site-packages/vtmarketplace.pth
 ```
 
-Create a e-commerce project using doorstep-admin.py instead of using django-admin.py if you have install it using pip.
+Create a e-commerce project using vtmarketplace-admin.py instead of using django-admin.py if you have install it using pip.
 
 ```
-$ doorstep-admin.py startproject doorstep_site
+$ vtmarketplace-admin.py startproject vtmarketplace_site
 ```
 
-If you have exported repository clone path then install Django & other packages dependencies using requirements.txt in your virtualenv first and then create new project site. Doorstep also requires Node.js packages, see details below.
+If you have exported repository clone path then install Django & other packages dependencies using requirements.txt in your virtualenv first and then create new project site. vtmarketplace also requires Node.js packages, see details below.
 
 ```
 $ pip install -r requirements.txt && cd ../
@@ -114,7 +113,7 @@ $ python manage.py runserver
 
 ## Development
 
-Doorstep is yet to develop some core features:
+VTMarketplace is yet to develop some core features:
 
 - Dashboard
 - Unit tests
@@ -129,13 +128,8 @@ Doorstep is yet to develop some core features:
 
 ## Contributing
 
-Doorstep is free and open-source, I support and encourage an active healthy community that accepts contributions from the public – **including you!**
+VTMarketplace is free and open-source, I support and encourage an active healthy community that accepts contributions from the public – **including you!**
 
 Pull requests are appreciated!
 
 
-## Screenshot
-
-![Doorstep Demo Screenshot](https://raw.github.com/mysteryjeans/doorstep-demo/master/media/images/demo-screenshot.jpg)
-
-![Doorstep Demo Screenshot](https://raw.github.com/mysteryjeans/doorstep-demo/master/media/images/mobile-screenshot.png)
