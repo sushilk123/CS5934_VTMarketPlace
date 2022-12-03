@@ -1,9 +1,8 @@
 VTMarketplace
 ========
 
-
-VTMarketplace is open source e-commerce solution, simplicity in designed is to thrive sales and reduce development effort. Please read the documentation 
-
+Virginia Tech MarketPlace is a one stop shop for all VT students to buy and sell used items. It is designed specifically for the VT students to limit the user base and reinforce trust in transactions.
+It is a platform where sellers can come together to sell their products or services to a curated customer base. Sellers have a place to gain visibility and sell their products, and the marketplace buyers can get the items at a cheaper and better price
 
 ## Features
 
