@@ -50,7 +50,7 @@ $ python manage.py migrate
 ```
 
 
-## Setting up Doorstep e-commerce as Django App and separate project site
+## Setting up VTMarketplace e-commerce as Django App and separate project site
 
 [Doorstep demo](https://github.com/mysteryjeans/doorstep-demo) repository is for quickly getting up and running e-commerce site on your local workstation, its readme contains all steps to setting up a site.
 
@@ -85,7 +85,7 @@ If you have exported repository clone path then install Django & other packages 
 
 ```
 $ pip install -r requirements.txt && cd ../
-$ doorstep/doorstep/bin/doorstep-admin.py startproject doorstep_site && cd doorstep_site
+$ vtmarketplace/vtmarketplace/bin/vtmarketplace-admin.py startproject vtmarketplace_site && cd vtmarketplace_site
 ```
 
 Create database schema by running migrate command, by default django project use SQLite, which off course you can changed in settings.py, if you are new to databases this is good choice to start with. Migrate command will also load initial data in database as well.
