@@ -33,7 +33,7 @@ $ virtualenv vtmarketplace_env && source vtmarketplace_env/bin/activate
 Get copy of latest version of VTMarketplace from Github.
 
 ```
-$ git clone https://github.com/mysteryjeans/vtmarketplace.git && cd vtmarketplace
+$ git clone https://github.com/sushilk123/CS5934_VTMarketPlace.git && cd vtmarketplace
 ```
 
 Install Django and other packages dependencies using requirements.txt in your virtualenv. VTMarketplace also requires Node.js packages, see details below.
@@ -48,50 +48,7 @@ Create database schema by running migrate command, by default Django project use
 $ python manage.py migrate
 ```
 
-
-## Setting up VTMarketplace e-commerce as Django App and separate project site
-
-[vtmarketplace demo](https://github.com/mysteryjeans/vtmarketplace-demo) repository is for quickly getting up and running e-commerce site on your local workstation, its readme contains all steps to setting up a site.
-
-When you have enough testing on prepopulated data in demo projects, starting your own site from scratch is similar to creating project in Django.
-
-Create a new virtualenv for your own e-commerce project
-
-```
-$ virtualenv vtmarketplace_env && source vtmarketplace_env/bin/activate
-```
-
-Install the latest development version from this git repository.
-
-```
-$ pip install --upgrade git+https://github.com/mysteryjeans/vtmarketplace.git#egg=vtmarketplace
-```
-
-Alternatively you can clone repository and export root directory path to python virtualenv site-packages
-
-```
-$ git clone https://github.com/mysteryjeans/vtmarketplace.git && cd vtmarketplace
-$ echo $(pwd) > ../vtmarketplace_env/lib/python2.7/site-packages/vtmarketplace.pth
-```
-
-Create a e-commerce project using vtmarketplace-admin.py instead of using django-admin.py if you have install it using pip.
-
-```
-$ vtmarketplace-admin.py startproject vtmarketplace_site
-```
-
 If you have exported repository clone path then install Django & other packages dependencies using requirements.txt in your virtualenv first and then create new project site. vtmarketplace also requires Node.js packages, see details below.
-
-```
-$ pip install -r requirements.txt && cd ../
-$ vtmarketplace/vtmarketplace/bin/vtmarketplace-admin.py startproject vtmarketplace_site && cd vtmarketplace_site
-```
-
-Create database schema by running migrate command, by default django project use SQLite, which off course you can changed in settings.py, if you are new to databases this is good choice to start with. Migrate command will also load initial data in database as well.
-
-```
-$ python manage.py migrate
-```
 
 ## Node.js packages dependency and installation
 
@@ -123,12 +80,5 @@ VTMarketplace is yet to develop some core features:
 - [LESS](https://github.com/less/less.js) &mdash; Our styling totally done in LESS, a preprocessor for CSS.
 - [Django-Pipeline](https://github.com/cyberdelia/django-pipeline) &mdash; We use django-pipeline to compile & compress LESS and also Javascript before deployment.
 - [PostgreSQL](http://www.postgresql.org/) &mdash; Our primary database is PostgreSQL, although project intended to support all databases that Django supports.
-
-
-## Contributing
-
-VTMarketplace is free and open-source, I support and encourage an active healthy community that accepts contributions from the public – **including you!**
-
-Pull requests are appreciated!
 
 
