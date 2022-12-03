@@ -1,7 +1,7 @@
 [
 {
     "pk": 1, 
-    "model": "doorstep.sysconfig", 
+    "model": "vtmarketplace.sysconfig", 
     "fields": {
         "updated_by": "system", 
         "description": "Domain name will be used in link generation, specially in emails", 
@@ -14,11 +14,11 @@
 },
 {
     "pk": 2, 
-    "model": "doorstep.sysconfig", 
+    "model": "vtmarketplace.sysconfig", 
     "fields": {
         "updated_by": "system", 
         "description": "Name of your website that will be used in all pages", 
-        "value": "Doorstep", 
+        "value": "vtmarketplace", 
         "created_on": "2014-09-19T22:28:46.684Z", 
         "created_by": "system", 
         "updated_on": "2014-09-19T22:28:46.684Z", 
@@ -27,7 +27,7 @@
 },
 {
     "pk": 3, 
-    "model": "doorstep.sysconfig", 
+    "model": "vtmarketplace.sysconfig", 
     "fields": {
         "updated_by": "system", 
         "description": "Page title for index pages of your website", 
@@ -40,11 +40,11 @@
 },
 {
     "pk": 5, 
-    "model": "doorstep.sysconfig", 
+    "model": "vtmarketplace.sysconfig", 
     "fields": {
         "updated_by": "system", 
         "description": "Meta description for SEO", 
-        "value": "The e-commerce solution site build using Doorstep", 
+        "value": "The e-commerce solution site build using vtmarketplace", 
         "created_on": "2014-09-19T22:28:46.747Z", 
         "created_by": "system", 
         "updated_on": "2014-09-19T22:28:46.747Z", 
@@ -53,11 +53,11 @@
 },
 {
     "pk": 6, 
-    "model": "doorstep.sysconfig", 
+    "model": "vtmarketplace.sysconfig", 
     "fields": {
         "updated_by": "system", 
         "description": "Copyright statement displayed on all pages", 
-        "value": "Copyright &copy; 2015 Doorstep. All rights reserved.", 
+        "value": "Copyright &copy; 2015 vtmarketplace. All rights reserved.", 
         "created_on": "2014-09-19T22:28:46.768Z", 
         "created_by": "system", 
         "updated_on": "2014-09-19T22:28:46.768Z", 
@@ -66,11 +66,11 @@
 },
 {
     "pk": 7, 
-    "model": "doorstep.sysconfig", 
+    "model": "vtmarketplace.sysconfig", 
     "fields": {
         "updated_by": "system", 
         "description": "Support email address displayed for bugs and error reporting", 
-        "value": "demo@doorstep.com", 
+        "value": "demo@vtmarketplace.com", 
         "created_on": "2014-09-19T22:28:46.789Z", 
         "created_by": "system", 
         "updated_on": "2014-09-19T22:28:46.789Z", 
@@ -79,7 +79,7 @@
 },
 {
     "pk": 14, 
-    "model": "doorstep.sysconfig", 
+    "model": "vtmarketplace.sysconfig", 
     "fields": {
         "updated_by": "system", 
         "description": "Number of products listing on single page", 
@@ -92,7 +92,7 @@
 },
 {
     "pk": 15, 
-    "model": "doorstep.sysconfig", 
+    "model": "vtmarketplace.sysconfig", 
     "fields": {
         "updated_by": "system", 
         "description": "Maximun number of products should be displayed as new arrivals", 

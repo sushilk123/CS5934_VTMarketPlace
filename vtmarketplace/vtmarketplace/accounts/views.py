@@ -1,5 +1,5 @@
 """
-Accounts views for Doorstep apps
+Accounts views for vtmarketplace apps
 """
 
 from django.db import transaction
@@ -12,12 +12,12 @@ from django.contrib.auth.decorators import login_required
 from django.template import Context
 from django.template.loader import get_template
 
-from doorstep.views import BaseView
-from doorstep.exceptions import DoorstepError
-from doorstep.decorators import anonymous_required
-from doorstep.catalog.views import CatalogBaseView
-from doorstep.accounts.forms import RegisterForm, PasswordResetForm, ChangePasswordForm
-from doorstep.utils.helpers import send_mail
+from vtmarketplace.views import BaseView
+from vtmarketplace.exceptions import vtmarketplaceError
+from vtmarketplace.decorators import anonymous_required
+from vtmarketplace.catalog.views import CatalogBaseView
+from vtmarketplace.accounts.forms import RegisterForm, PasswordResetForm, ChangePasswordForm
+from vtmarketplace.utils.helpers import send_mail
 
 
 User = get_user_model()
@@ -25,7 +25,7 @@ User = get_user_model()
 
 class LoginView(CatalogBaseView):
     """
-    Login view for Doorstep
+    Login view for vtmarketplace
     """
     template_name = 'accounts/login.html'
     decorators = [anonymous_required]
@@ -62,7 +62,7 @@ class LoginView(CatalogBaseView):
 
 class LogoutView(BaseView):
     """
-    Logout view from Doorstep
+    Logout view from vtmarketplace
     """
 
     def get(self, request):
@@ -141,7 +141,7 @@ class ForgotPasswordView(CatalogBaseView):
                 send_mail(msg_subject, msg_text, [to_email], True)
 
                 success = 'Password reset intructions has been sent to your email address.'
-            except DoorstepError as e:
+            except vtmarketplaceError as e:
                 error = e.message
 
         return self.get(request, error=error, success=success)
@@ -169,7 +169,7 @@ class PasswordResetView(CatalogBaseView):
             try:
                 User.objects.reset_password(user_id, reset_code, data['password'])
                 success = 'Your password has been successfully reset!'
-            except DoorstepError as e:
+            except vtmarketplaceError as e:
                 error = e.message
 
         return super(PasswordResetView, self).get(request, form=form, user_id=user_id, reset_code=reset_code,
@@ -198,7 +198,7 @@ class ChangePasswordView(CatalogBaseView):
             try:
                 User.objects.change_password(request.user, data['current_password'], data['password'])
                 success = 'Your password has been successfully changed!'
-            except DoorstepError as e:
+            except vtmarketplaceError as e:
                 error = e.message
 
         return super(ChangePasswordView, self).get(request, form=form, error=error, success=success)

@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from doorstep.geo import models
-from doorstep.admin import ModelAdmin
+from vtmarketplace.geo import models
+from vtmarketplace.admin import ModelAdmin
 
 
 class CountryAdmin(ModelAdmin):

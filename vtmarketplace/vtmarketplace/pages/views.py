@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404
 
-from doorstep.views import BaseView
-from doorstep.pages.models import Page
+from vtmarketplace.views import BaseView
+from vtmarketplace.pages.models import Page
 
 
 class BasePageView(BaseView):

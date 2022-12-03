@@ -5,13 +5,13 @@ import os
 import subprocess
 
 
-# Returns PEP 386-compliant version for doorstep
+# Returns PEP 386-compliant version for vtmarketplace
 # This code is copied from django.utils.version branch stable/1.6.x
 
 def get_version(version=None):
     "Returns a PEP 386-compliant version number from VERSION."
     if version is None:
-        from doorstep import VERSION as version
+        from vtmarketplace import VERSION as version
     else:
         assert len(version) == 5
         assert version[3] in ('alpha', 'beta', 'rc', 'final')

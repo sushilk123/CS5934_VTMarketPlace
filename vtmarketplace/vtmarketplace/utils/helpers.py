@@ -4,7 +4,7 @@ from django.conf import settings
 from django.core.mail import EmailMessage
 from django.core.exceptions import ImproperlyConfigured
 
-from doorstep.models import SysConfig
+from vtmarketplace.models import SysConfig
 
 
 def send_mail(subject, message, recipients, is_html):

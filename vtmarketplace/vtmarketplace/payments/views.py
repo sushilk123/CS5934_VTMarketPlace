@@ -4,12 +4,12 @@ from django.shortcuts import render, get_object_or_404
 from django.core.exceptions import ImproperlyConfigured
 from django.core.urlresolvers import reverse
 
-from doorstep.exceptions import DoorstepError
-from doorstep.sales.models import Order
-from doorstep.catalog.views import CatalogBaseView, get_default_currency
-from doorstep.payments.forms import CreditCardForm
-from doorstep.payments.models import Gateway, Transaction, TransactionParam
-from doorstep.payments.processors import PayPal, Stripe
+from vtmarketplace.exceptions import vtmarketplaceError
+from vtmarketplace.sales.models import Order
+from vtmarketplace.catalog.views import CatalogBaseView, get_default_currency
+from vtmarketplace.payments.forms import CreditCardForm
+from vtmarketplace.payments.models import Gateway, Transaction, TransactionParam
+from vtmarketplace.payments.processors import PayPal, Stripe
 
 
 def process_online(request, order_id, receipt_code):
@@ -56,7 +56,7 @@ def process_credit_card(request, order_id, receipt_code):
             try:
                 processor.credit_card_payment(data['card'], order, request.user)
                 return render(request, 'payments/credit_card_processed.html', {'order': order})
-            except DoorstepError as e:
+            except vtmarketplaceError as e:
                 error = e.message
 
         gateways = Gateway.get_gateways()
@@ -83,9 +83,9 @@ def process_account_request(request, order_id, receipt_code):
                 processor = PayPal(gateway)
                 return HttpResponseRedirect(processor.create_account_payment(order, request.user))
             else:
-                raise ImproperlyConfigured('Doorstep doesn\'t yet support payment with %s account.'
+                raise ImproperlyConfigured('vtmarketplace doesn\'t yet support payment with %s account.'
                                            % gateway.get_name_display())
-        except DoorstepError as e:
+        except vtmarketplaceError as e:
             request.session['processing_error'] = e.message
             return HttpResponseRedirect(reverse('payments_processing_message'))
 
@@ -120,10 +120,10 @@ def process_account_response(request, transaction_id, access_token, success):
                     request.session['processing_message'] = 'Your order has been canceled.'
                     return HttpResponseRedirect(reverse('payments_processing_message'))
             else:
-                raise ImproperlyConfigured('Doorstep doesn\'t yet support payment with %s account.'
+                raise ImproperlyConfigured('vtmarketplace doesn\'t yet support payment with %s account.'
                                            % gateway.get_name_display())
 
-        except DoorstepError as e:
+        except vtmarketplaceError as e:
             request.session['processing_error'] = e.message
             return HttpResponseRedirect(reverse('payments_processing_message'))
 

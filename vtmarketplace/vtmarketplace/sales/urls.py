@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
-from doorstep.sales.views import add_to_cart, remove_from_cart, remove_all_from_cart
-from doorstep.sales.views import CheckoutCartView, CheckoutBillingView, CheckoutShippingView, \
+from vtmarketplace.sales.views import add_to_cart, remove_from_cart, remove_all_from_cart
+from vtmarketplace.sales.views import CheckoutCartView, CheckoutBillingView, CheckoutShippingView, \
     CheckoutPaymentView, CheckoutOrderView, CheckoutReceiptView, PrintReceiptView
 
 urlpatterns = [

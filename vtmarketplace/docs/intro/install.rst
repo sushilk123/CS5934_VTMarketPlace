@@ -4,34 +4,34 @@
 Installation
 ============
 
-Before you can start with your e-commerce project, lets install Doorstep.
+Before you can start with your e-commerce project, lets install vtmarketplace.
 
 
 Virtual environment
 ==========================
 
-Create a new `virtual environment`_ for Doorstep, its isolated Python environment
-which are more practical than installing Doorstep systemwide. They also allow
+Create a new `virtual environment`_ for vtmarketplace, its isolated Python environment
+which are more practical than installing vtmarketplace systemwide. They also allow
 installing packages without root privileges, you may create separate virtualenv_
 for each of your e-commerce site.
 
 .. code-block:: console
 
-     $ virtualenv doorstep_env && source doorstep_env/bin/activate
+     $ virtualenv vtmarketplace_env && source vtmarketplace_env/bin/activate
 
 .. _virtualenv: http://www.virtualenv.org/
 .. _virtual environment: http://www.virtualenv.org/
 
-Install Doorstep
+Install vtmarketplace
 ================
 
-Recommend way to install Doorstep is via pip_, it will be easy
+Recommend way to install vtmarketplace is via pip_, it will be easy
 to upgrade to latest version. Alternatively you can download repository and
 install with via setuptools_ ``python setup.py install``
 
 .. code-block:: console
 
-   $ pip install --upgrade git+https://github.com/mysteryjeans/doorstep.git#egg=Doorstep
+   $ pip install --upgrade git+https://github.com/mysteryjeans/vtmarketplace.git#egg=vtmarketplace
 
 .. _pip: https://pip.pypa.io/
 .. _setuptools: https://pypi.python.org/pypi/setuptools

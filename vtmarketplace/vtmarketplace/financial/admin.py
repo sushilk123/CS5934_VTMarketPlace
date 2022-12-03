@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from doorstep.admin import ModelAdmin
-from doorstep.financial import models
+from vtmarketplace.admin import ModelAdmin
+from vtmarketplace.financial import models
 
 
 class CurrencyAdmin(ModelAdmin):

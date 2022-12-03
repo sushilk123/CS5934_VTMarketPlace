@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth import get_user_model
 
-from doorstep.admin import ModelAdmin
+from vtmarketplace.admin import ModelAdmin
 
 
 class UserAdmin(ModelAdmin):

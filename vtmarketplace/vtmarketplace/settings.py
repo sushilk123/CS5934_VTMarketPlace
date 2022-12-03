@@ -1,47 +1,47 @@
 
 import os
 
-# Doorstep e-commerce settings for Django project
+# vtmarketplace e-commerce settings for Django project
 # Customize these settings only if you know
 
-# Django authentication app extended by Doorstep in Django way
+# Django authentication app extended by vtmarketplace in Django way
 # To implement your own custom auth user model, extend
-# doorstep.accounts.AbstractUser instead and change AUTH_USER_MODEL
-# similarly. Doorstep will adopt new AUTH_USER_MODEL seemlessly
+# vtmarketplace.accounts.AbstractUser instead and change AUTH_USER_MODEL
+# similarly. vtmarketplace will adopt new AUTH_USER_MODEL seemlessly
 AUTH_USER_MODEL = 'accounts.User'
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-# Doorstep apps configuration required for Django
+# vtmarketplace apps configuration required for Django
 # DOORSALE_APPS = (
-#     'doorstep',
-#     'doorstep.geo',
-#     'doorstep.pages',
-#     'doorstep.accounts',
-#     'doorstep.catalog',
-#     'doorstep.sales',
-#     'doorstep.financial',
-#     'doorstep.payments',
+#     'vtmarketplace',
+#     'vtmarketplace.geo',
+#     'vtmarketplace.pages',
+#     'vtmarketplace.accounts',
+#     'vtmarketplace.catalog',
+#     'vtmarketplace.sales',
+#     'vtmarketplace.financial',
+#     'vtmarketplace.payments',
 # )
 DOORSALE_APPS = (
-    'doorstep',
-    'doorstep.geo',
-    'doorstep.pages',
-    'doorstep.accounts',
-    'doorstep.catalog',
-    'doorstep.sales',
-    'doorstep.financial',
-    'doorstep.payments',
+    'vtmarketplace',
+    'vtmarketplace.geo',
+    'vtmarketplace.pages',
+    'vtmarketplace.accounts',
+    'vtmarketplace.catalog',
+    'vtmarketplace.sales',
+    'vtmarketplace.financial',
+    'vtmarketplace.payments',
 )
 
-# Thumbnail generator app for Doorstep
+# Thumbnail generator app for vtmarketplace
 DOORSALE_APPS += (
     'sorl.thumbnail',
 )
 # Raise thumbnail errors and send it via emails
 THUMBNAIL_DEBUG = True
 
-# Doorstep uses django-pipeline for LESS & Javascript
+# vtmarketplace uses django-pipeline for LESS & Javascript
 # preprocessing, compression and versioning.
 # When collectstatic called during deployment LESS & Javascript will be
 # compiled, compressed and versioned before copying to static folder
@@ -60,7 +60,7 @@ STATICFILES_FINDERS += (
 # Always use relative paths in @import statements in LESS
 # All resources in app's static directory will be available
 # for LESS compiler
-from doorstep.utils.finders import get_static_paths
+from vtmarketplace.utils.finders import get_static_paths
 STATIC_PATHS = os.pathsep.join(get_static_paths(DOORSALE_APPS))
 PIPELINE_LESS_ARGUMENTS = '--include-path="%s"' % STATIC_PATHS
 
@@ -71,31 +71,31 @@ PIPELINE = {
     'LESS_ARGUMENTS': '--include-path="%s"' % STATIC_PATHS,
 
     # CSS configurations for django-pipeline
-    # All LESS styles configured for doorstep defined
+    # All LESS styles configured for vtmarketplace defined
     # You can append your LESS configurations here.
     'STYLESHEETS': {
-        # doorstep app LESS styles
+        # vtmarketplace app LESS styles
         'base': {
             'source_filenames': (
-                'doorstep/css/base.less',
+                'vtmarketplace/css/base.less',
             ),
-            'output_filename': 'doorstep/css/base.css'
+            'output_filename': 'vtmarketplace/css/base.css'
         },
-        # doorstep.catalog LESS styles for products catalog
+        # vtmarketplace.catalog LESS styles for products catalog
         'catalog': {
             'source_filenames': (
                 'catalog/css/catalog.less',
             ),
             'output_filename': 'catalog/css/catalog.css'
         },
-        # doorstep.sales LESS styles for checkout pages
+        # vtmarketplace.sales LESS styles for checkout pages
         'sales': {
             'source_filenames': (
                 'sales/css/sales.less',
             ),
             'output_filename': 'sales/css/sales.css'
         },
-        # doorstep.pages LESS styles for flat pages
+        # vtmarketplace.pages LESS styles for flat pages
         'pages': {
             'source_filenames': (
                 'pages/css/pages.less',
@@ -106,17 +106,17 @@ PIPELINE = {
 
     'DISABLE_WRAPPER': True,
     # Javascript configuration for django-pipeline
-    # Doorstep app's Javascript compressed & versioned before deployment
+    # vtmarketplace app's Javascript compressed & versioned before deployment
     # Simply add your project or apps Javascript here
     'JAVASCRIPT': {
-        # doorstep: Base javascript include in every page
+        # vtmarketplace: Base javascript include in every page
         'jquery_ajax': {
             'source_filenames': (
-                'doorstep/scripts/jquery-ajax.js',
+                'vtmarketplace/scripts/jquery-ajax.js',
             ),
-            'output_filename': 'doorstep/scripts/jquery-ajax.js',
+            'output_filename': 'vtmarketplace/scripts/jquery-ajax.js',
         },
-        # doorstep.catalog: Javascript for product catalog pages
+        # vtmarketplace.catalog: Javascript for product catalog pages
         'catalog_base': {
             'source_filenames': (
                 'catalog/scripts/jquery.catalog_base.js',
@@ -149,7 +149,7 @@ PIPELINE = {
     }
 }
 
-# Views to render page from doorstep.pages
+# Views to render page from vtmarketplace.pages
 PAGE_VIEWS = (('pages_base_page', 'Base View'),
               ('pages_catalog_page', 'Catalog View')
 )

@@ -12,9 +12,9 @@ from django.utils.crypto import get_random_string
 from django.core.exceptions import ImproperlyConfigured
 from django.core.urlresolvers import reverse
 
-from doorstep.exceptions import DoorstepError
-from doorstep.sales.models import Order
-from doorstep.payments.models import GatewayParam, Transaction
+from vtmarketplace.exceptions import vtmarketplaceError
+from vtmarketplace.sales.models import Order
+from vtmarketplace.payments.models import GatewayParam, Transaction
 
 # Processors module logger
 logger = logging.getLogger('django.request')
@@ -110,7 +110,7 @@ class PayPal:
             logger.error('Failed to process PayPal account (transaction_id: %s)' % payment_txn.id)
             logger.exception(e)
 
-            raise DoorstepError('We failed to process your PayPal account at the moment, please try again later!')
+            raise vtmarketplaceError('We failed to process your PayPal account at the moment, please try again later!')
 
         if payment_created:
             with transaction.atomic():
@@ -130,7 +130,7 @@ class PayPal:
         payment_txn.error_message = payment.error['message']
         payment_txn.save()
 
-        raise DoorstepError('We failed to process your PayPal account at the moment, please try again later!')
+        raise vtmarketplaceError('We failed to process your PayPal account at the moment, please try again later!')
 
     def execute_account_payment(self, payer_id, payment_txn, user):
         """
@@ -154,7 +154,7 @@ class PayPal:
                 payment_txn.error_message = payment.error['message']
                 payment_txn.save()
 
-            raise DoorstepError('We failed to process your PayPal account at the moment, please try again later!')
+            raise vtmarketplaceError('We failed to process your PayPal account at the moment, please try again later!')
 
     def cancel_account_payment(self, payment_txn, user):
         """
@@ -219,7 +219,7 @@ class PayPal:
             logger.error('Failed to process Credit Card (transaction_id: %s)' % payment_txn.id)
             logger.exception(e)
 
-            raise DoorstepError('We failed to process your Credit Card at the moment, please try again later!')
+            raise vtmarketplaceError('We failed to process your Credit Card at the moment, please try again later!')
 
         if payment_created:
             try:
@@ -252,7 +252,7 @@ class PayPal:
                 payment_txn.error_message = payment.error['message']
                 payment_txn.save()
 
-            raise DoorstepError('We failed to process your Credit Card at the moment, please try again later!')
+            raise vtmarketplaceError('We failed to process your Credit Card at the moment, please try again later!')
 
         return payment_txn
 
@@ -341,12 +341,12 @@ class Stripe:
             payment_txn.error_message = error['message']
             payment_txn.save()
 
-            raise DoorstepError(error['message'])
+            raise vtmarketplaceError(error['message'])
         except Exception as e:
             logger.error('Failed to process Credit Card (transaction_id: %s)' % payment_txn.id)
             logger.exception(e)
 
-            raise DoorstepError('We failed to process your Credit Card at the moment, please try again later!')
+            raise vtmarketplaceError('We failed to process your Credit Card at the moment, please try again later!')
 
     def refund_payment(self, **kwargs):
         """

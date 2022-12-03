@@ -1,5 +1,5 @@
 """
-Decorators for Doorstep accounts app
+Decorators for vtmarketplace accounts app
 """
 
 from functools import wraps

@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from doorstep.payments.views import process_online, process_credit_card, \
+from vtmarketplace.payments.views import process_online, process_credit_card, \
     process_account_request, process_account_response, ProcessingMessageView
 
 urlpatterns = [

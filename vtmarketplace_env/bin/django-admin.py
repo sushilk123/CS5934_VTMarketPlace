@@ -1,4 +1,4 @@
-#!/Users/adwaitpradhan/Documents/doorstep_env/bin/python
+#!/Users/adwaitpradhan/Documents/vtmarketplace_env/bin/python
 from django.core import management
 
 if __name__ == "__main__":

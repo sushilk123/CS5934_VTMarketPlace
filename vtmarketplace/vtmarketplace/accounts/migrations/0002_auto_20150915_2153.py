@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-import doorstep.accounts.models
+import vtmarketplace.accounts.models
 import django.core.validators
 
 
@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
         migrations.AlterModelManagers(
             name='user',
             managers=[
-                ('objects', doorstep.accounts.models.UserManager()),
+                ('objects', vtmarketplace.accounts.models.UserManager()),
             ],
         ),
         migrations.AlterField(

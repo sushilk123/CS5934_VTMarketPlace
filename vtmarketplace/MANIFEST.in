@@ -1,24 +1,24 @@
 include README.md
 include LICENSE
 include MANIFEST.in
-recursive-include doorstep/bin *
-recursive-include doorstep/fixtures *
-recursive-include doorstep/geo/fixtures *
-recursive-include doorstep/sales/fixtures *
-recursive-include doorstep/pages/fixtures *
-recursive-include doorstep/payments/fixtures *
-recursive-include doorstep/financial/fixtures *
-recursive-include doorstep/static *
-recursive-include doorstep/templates *
-recursive-include doorstep/sales/static *
-recursive-include doorstep/sales/templates *
-recursive-include doorstep/catalog/static *
-recursive-include doorstep/catalog/templates *
-recursive-include doorstep/accounts/templates *
-recursive-include doorstep/payments/templates *
-recursive-include doorstep/conf/project_template *
-recursive-include doorstep/pages/static *
-recursive-include doorstep/pages/templates *
+recursive-include vtmarketplace/bin *
+recursive-include vtmarketplace/fixtures *
+recursive-include vtmarketplace/geo/fixtures *
+recursive-include vtmarketplace/sales/fixtures *
+recursive-include vtmarketplace/pages/fixtures *
+recursive-include vtmarketplace/payments/fixtures *
+recursive-include vtmarketplace/financial/fixtures *
+recursive-include vtmarketplace/static *
+recursive-include vtmarketplace/templates *
+recursive-include vtmarketplace/sales/static *
+recursive-include vtmarketplace/sales/templates *
+recursive-include vtmarketplace/catalog/static *
+recursive-include vtmarketplace/catalog/templates *
+recursive-include vtmarketplace/accounts/templates *
+recursive-include vtmarketplace/payments/templates *
+recursive-include vtmarketplace/conf/project_template *
+recursive-include vtmarketplace/pages/static *
+recursive-include vtmarketplace/pages/templates *
 recursive-exclude * .DS_Store
 recursive-exclude * *.py[co]
 recursive-exclude * __pycache__

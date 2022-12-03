@@ -20,7 +20,7 @@ class SysConfig(models.Model):
     created_by = models.CharField(max_length=100)
 
     class Meta:
-        db_table = 'doorstep_sys_config'
+        db_table = 'vtmarketplace_sys_config'
         verbose_name = 'System Config'
         verbose_name_plural = 'System Configs'
         ordering = ['id']

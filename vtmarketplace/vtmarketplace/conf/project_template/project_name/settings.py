@@ -124,8 +124,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-################## Doorstep #########################
-# Doorstep e-commerce settings for Django project
+################## vtmarketplace #########################
+# vtmarketplace e-commerce settings for Django project
 # Customize these settings only if you know
-from doorstep.settings import *
+from vtmarketplace.settings import *
 INSTALLED_APPS += DOORSALE_APPS

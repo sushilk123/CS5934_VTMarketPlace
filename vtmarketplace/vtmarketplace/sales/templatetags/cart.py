@@ -1,7 +1,7 @@
 from django import template
 from django.conf import settings
 
-from doorstep.sales.models import Cart
+from vtmarketplace.sales.models import Cart
 
 
 register = template.Library()

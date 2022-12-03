@@ -4,9 +4,9 @@ from django.db import models
 from django.conf import settings
 from django.utils.crypto import get_random_string
 
-from doorstep.geo.models import Address
-from doorstep.catalog.models import Product
-from doorstep.financial.models import Currency, Tax
+from vtmarketplace.geo.models import Address
+from vtmarketplace.catalog.models import Product
+from vtmarketplace.financial.models import Currency, Tax
 
 
 class Cart(models.Model):

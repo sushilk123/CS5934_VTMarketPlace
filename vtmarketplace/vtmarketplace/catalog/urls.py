@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from doorstep.catalog.views import *
+from vtmarketplace.catalog.views import *
 
 urlpatterns = [
     url(r'^$', IndexView.as_view(), name='catalog_index'),

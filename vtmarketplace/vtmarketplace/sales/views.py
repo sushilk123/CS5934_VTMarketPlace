@@ -8,13 +8,13 @@ from django.template import Context
 from django.template.loader import get_template
 from django.shortcuts import render, get_object_or_404
 
-from doorstep.geo.models import Address
-from doorstep.sales.models import Cart, Order, PaymentMethod
-from doorstep.sales.forms import AddressForm
-from doorstep.catalog.views import CatalogBaseView, get_default_currency
-from doorstep.exceptions import DoorstepError
-from doorstep.views import BaseView
-from doorstep.utils.helpers import send_mail
+from vtmarketplace.geo.models import Address
+from vtmarketplace.sales.models import Cart, Order, PaymentMethod
+from vtmarketplace.sales.forms import AddressForm
+from vtmarketplace.catalog.views import CatalogBaseView, get_default_currency
+from vtmarketplace.exceptions import vtmarketplaceError
+from vtmarketplace.views import BaseView
+from vtmarketplace.utils.helpers import send_mail
 
 
 @transaction.atomic
@@ -377,7 +377,7 @@ class CheckoutOrderView(CheckoutBaseView):
 
             return HttpResponseRedirect(reverse('sales_checkout_receipt', args=[order.id, order.receipt_code]))
 
-        except DoorstepError as e:
+        except vtmarketplaceError as e:
             error = e.message
 
         return self.get(request, error=error)

@@ -3,12 +3,12 @@ import os
 from setuptools import setup, find_packages
 
 SETUP_DIR = os.path.dirname(os.path.abspath(__file__))
-EXCLUDE_FROM_PACKAGES = ['doorstep.conf.project_settings',
-                         'doorstep.bin']
+EXCLUDE_FROM_PACKAGES = ['vtmarketplace.conf.project_settings',
+                         'vtmarketplace.bin']
 
 
 # Dynamically calculate the version based on django.VERSION.
-version = __import__('doorstep').get_version()
+version = __import__('vtmarketplace').get_version()
 
 
 # Setup should be run from any extracted folder
@@ -22,7 +22,7 @@ with open(os.path.join(SETUP_DIR, 'README.md')) as readme:
 
 setup(name='VTMarketPlace',
       version=version,
-      url='https://github.com/mysteryjeans/doorstep',
+      url='https://github.com/mysteryjeans/vtmarketplace',
       author='VTMarketPlace',
       author_email='xyz@vt.edu',
       description='One stop destination for VT Student Marketplace',
@@ -30,7 +30,7 @@ setup(name='VTMarketPlace',
       license='GPLv2',
       packages=find_packages(exclude=EXCLUDE_FROM_PACKAGES),
       include_package_data=True,
-      scripts=['doorstep/bin/doorstep-admin.py'],
+      scripts=['vtmarketplace/bin/vtmarketplace-admin.py'],
       install_requires=['Django>=1.8.13,<1.10',
                         'django-pipeline>=1.6',
                         'Pillow>=2.7.0',

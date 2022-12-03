@@ -2,12 +2,12 @@ from __future__ import unicode_literals
 
 from django.views.generic import TemplateView
 
-from doorstep.models import SysConfig
+from vtmarketplace.models import SysConfig
 
 
 class BaseView(TemplateView):
     """
-    Base view for all Doorstep views
+    Base view for all vtmarketplace views
 
     Provide site context variables from settings and apply decoractors to views
     """
@@ -15,7 +15,7 @@ class BaseView(TemplateView):
     style_name = 'base'
 
     # Base template to extend in drived views
-    base_template_name = 'doorstep/base.html'
+    base_template_name = 'vtmarketplace/base.html'
 
     # Decorators applied to generated view
     decorators = []

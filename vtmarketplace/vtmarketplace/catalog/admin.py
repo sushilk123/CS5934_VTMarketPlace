@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from doorstep.admin import ModelAdmin
-from doorstep.catalog import models
+from vtmarketplace.admin import ModelAdmin
+from vtmarketplace.catalog import models
 
 
 class ManufacturerAdmin(ModelAdmin):

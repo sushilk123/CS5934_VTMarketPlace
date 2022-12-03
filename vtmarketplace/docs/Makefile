@@ -91,9 +91,9 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/Doorstep.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/vtmarketplace.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/Doorstep.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/vtmarketplace.qhc"
 
 .PHONY: applehelp
 applehelp:
@@ -110,8 +110,8 @@ devhelp:
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/Doorstep"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/Doorstep"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/vtmarketplace"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/vtmarketplace"
 	@echo "# devhelp"
 
 .PHONY: epub

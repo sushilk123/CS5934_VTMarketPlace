@@ -3,7 +3,7 @@ import datetime
 
 from django import forms
 
-from doorstep.payments.models import Gateway
+from vtmarketplace.payments.models import Gateway
 
 
 class CreditCardForm(forms.Form):

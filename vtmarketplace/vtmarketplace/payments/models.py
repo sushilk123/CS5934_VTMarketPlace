@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.core.exceptions import ValidationError
 
-from doorstep.sales.models import Order
+from vtmarketplace.sales.models import Order
 
 
 class CardIssuer(models.Model):

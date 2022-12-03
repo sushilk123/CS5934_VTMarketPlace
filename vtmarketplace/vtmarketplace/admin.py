@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from doorstep.models import SysConfig
+from vtmarketplace.models import SysConfig
 
 
 class ModelAdmin(admin.ModelAdmin):

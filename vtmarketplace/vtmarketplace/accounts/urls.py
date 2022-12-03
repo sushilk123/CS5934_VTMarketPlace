@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from doorstep.accounts.views import LoginView, LogoutView, RegisterView, ForgotPasswordView, PasswordResetView, ChangePasswordView
+from vtmarketplace.accounts.views import LoginView, LogoutView, RegisterView, ForgotPasswordView, PasswordResetView, ChangePasswordView
 
 urlpatterns = [
     url(r'^login/$', LoginView.as_view(), name='accounts_login'),

@@ -4,49 +4,49 @@
 Configuration
 =============
 
-Doorstep also requires settings to be defined in ``settings.py``, you have
+vtmarketplace also requires settings to be defined in ``settings.py``, you have
 probably :doc:`create new project <project>` for site which should have following
 extra settings beside standard Django settings parameters:
 
 .. code-block:: python
 
-    ################## Doorstep #########################
-    # Doorstep e-commerce settings for Django project
+    ################## vtmarketplace #########################
+    # vtmarketplace e-commerce settings for Django project
     # Customize these settings only if you know
-    from doorstep.settings import *
+    from vtmarketplace.settings import *
     INSTALLED_APPS += DOORSALE_APPS
 
-This code is effectively importing all the settings required by Doorstep into
-your project's ``settings.py``. However Doorstep apps doesn't replace your
+This code is effectively importing all the settings required by vtmarketplace into
+your project's ``settings.py``. However vtmarketplace apps doesn't replace your
 project's ``INSTALLED_APPS``, therefore ``DOORSALE_APPS`` must be added to
 your projects installed apps explicitly.
 
 
 .. admonition:: Override Settings!
 
-    All settings variable should be defined after Doorstep's default imported in
+    All settings variable should be defined after vtmarketplace's default imported in
     ``settings.py``
 
 User Model
 ==========
 
-Doorstep extends ``django.contrib.auth`` by driving from Django's `auth user model`_
+vtmarketplace extends ``django.contrib.auth`` by driving from Django's `auth user model`_
 abstract classes and defined it's own user auth model in ``settings.py``.
 Where ``accounts.User`` is compose of app name **accounts** that contains auth user model **User**. ::
 
     AUTH_USER_MODEL = 'accounts.User'
 
-You can extend Doorstep's auth user model in similar way by creating your own
+You can extend vtmarketplace's auth user model in similar way by creating your own
 authentication app ``myauth`` and drive ``MyUser`` user model from abstract
-classes provided in ``doorstep.accounts``. ::
+classes provided in ``vtmarketplace.accounts``. ::
 
     from django.db import models
-    from doorstep.accounts.models import AbstractUser
+    from vtmarketplace.accounts.models import AbstractUser
 
     class MyUser(AbstractUser):
         mail_digest = models.BooleanField(default=True)
 
-Lastly override ``AUTH_USER_MODEL`` in project ``settings.py`` after Doorstep settings.
+Lastly override ``AUTH_USER_MODEL`` in project ``settings.py`` after vtmarketplace settings.
 Remember to use ``get_user_model`` from ``django.contrib.auth`` instead of
 directly references user auth model class. ::
 

@@ -6,7 +6,7 @@ from django.core.management import call_command
 
 
 def load_data(apps, schema_editor):
-    call_command('loaddata', 'initial_data', app_label='doorstep', verbosity=0)
+    call_command('loaddata', 'initial_data', app_label='vtmarketplace', verbosity=0)
 
 
 class Migration(migrations.Migration):
@@ -29,7 +29,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'ordering': ['id'],
-                'db_table': 'doorstep_sys_config',
+                'db_table': 'vtmarketplace_sys_config',
                 'verbose_name': 'System Config',
                 'verbose_name_plural': 'System Configs',
             },

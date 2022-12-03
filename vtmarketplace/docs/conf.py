@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Doorstep documentation build configuration file, created by
+# vtmarketplace documentation build configuration file, created by
 # sphinx-quickstart on Sun Jun 26 00:22:42 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -133,7 +133,7 @@ html_theme = 'sphinx_rtd_theme'
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-# html_title = u'Doorstep v0.1'
+# html_title = u'vtmarketplace v0.1'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
@@ -233,7 +233,7 @@ html_static_path = ['_static']
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Doorstepdoc'
+htmlhelp_basename = 'vtmarketplacedoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -259,7 +259,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Doorstep.tex', u'Doorstep Documentation',
+    (master_doc, 'vtmarketplace.tex', u'vtmarketplace Documentation',
      u'VTMarketPlace', 'manual'),
 ]
 
@@ -295,7 +295,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'doorstep', u'Doorstep Documentation',
+    (master_doc, 'vtmarketplace', u'vtmarketplace Documentation',
      [author], 1)
 ]
 
@@ -310,7 +310,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'VTMarketPlace', u'Doorstep Documentation',
+    (master_doc, 'VTMarketPlace', u'vtmarketplace Documentation',
      author, 'VTMarketPlace', 'One line description of project.',
      'Miscellaneous'),
 ]

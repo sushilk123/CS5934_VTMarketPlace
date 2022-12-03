@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.db.models import Q
 
-from doorstep.financial.models import Tax
+from vtmarketplace.financial.models import Tax
 
 
 class Manufacturer(models.Model):

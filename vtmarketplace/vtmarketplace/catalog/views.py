@@ -4,10 +4,10 @@ from django.core.exceptions import ImproperlyConfigured
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.generic import View
 
-from doorstep.views import BaseView
-from doorstep.catalog.forms import AdvancedSearchForm
-from doorstep.catalog.models import Manufacturer, Category, Product
-from doorstep.financial.models import Currency
+from vtmarketplace.views import BaseView
+from vtmarketplace.catalog.forms import AdvancedSearchForm
+from vtmarketplace.catalog.models import Manufacturer, Category, Product
+from vtmarketplace.financial.models import Currency
 
 
 class CatalogBaseView(BaseView):
@@ -27,7 +27,7 @@ class CatalogBaseView(BaseView):
             (currency for currency in self.currencies if currency.is_primary), None)
 
         if self.primary_currency is None:
-            raise ImproperlyConfigured('No primary currency is defined for Doorstep.'
+            raise ImproperlyConfigured('No primary currency is defined for vtmarketplace.'
                                        ' You should defined primary currency for the system with exchange rate of 1.'
                                        ' All prices & costs should be defined in primary currency value.')
 

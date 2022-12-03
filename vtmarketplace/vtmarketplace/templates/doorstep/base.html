@@ -1,4 +1,4 @@
-{% extends "doorstep/skeleton.html" %}
+{% extends "vtmarketplace/skeleton.html" %}
 
 {% load staticfiles %}
 {% load pipeline %}
@@ -14,17 +14,17 @@
 <meta property="og:site_name" content="{{ SITE_NAME }}"/>
 <meta property="og:title" content="{{ page_title|default:SITE_TITLE }} | {{ SITE_NAME }}"/>
 <meta property="og:type" content="website"/>
-<meta property="og:image" content="{% static 'doorstep/img/icon.png' %}"/>
+<meta property="og:image" content="{% static 'vtmarketplace/img/icon.png' %}"/>
 <meta property="og:description" content="{{ page_description|default:SITE_DESCRIPTION }}"/>
 <meta name="author" content="{{ SITE_NAME }}, {{ CONTACT_EMAIL }}"/>
 {% endblock %}
 <title>{{ page_title|default:SITE_TITLE }} | {{ SITE_NAME }}</title>
-<link rel="icon shortcut" href="{% static 'doorstep/img/icon.png' %}" type="image/png"/>
+<link rel="icon shortcut" href="{% static 'vtmarketplace/img/icon.png' %}" type="image/png"/>
 {% csrf_token %}
 {% block styles %}
-<link href="{% static 'doorstep/css/material-icons.css' %}" rel="stylesheet">
-<link href="{% static 'doorstep/css/fontawesome-all.min.css' %}" rel="stylesheet">
-<link href="{% static 'doorstep/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'vtmarketplace/css/material-icons.css' %}" rel="stylesheet">
+<link href="{% static 'vtmarketplace/css/fontawesome-all.min.css' %}" rel="stylesheet">
+<link href="{% static 'vtmarketplace/css/bootstrap.min.css' %}" rel="stylesheet">
 {% stylesheet style_name %}
 {% endblock %}
 {% endblock %}
@@ -35,7 +35,7 @@
 	{% block header-content %}
 	<nav class="navbar navbar-expand-sm navbar-light bg-light justify-content-start">
 		<a href="{% url 'catalog_index' %}" class="navbar-brand d-none d-lg-block">
-			<img src="{% static 'doorstep/img/VTName.png' %}" alt="logo" width="125" height="35">
+			<img src="{% static 'vtmarketplace/img/VTName.png' %}" alt="logo" width="125" height="35">
 		</a>
 		<button type="button" id="sidebar-collapse-button" class="d-lg-none btn btn-info mr-2">
 				<i class="fas fa-align-left mr-1"></i>
@@ -137,7 +137,7 @@
 	{% cache cache_timeout page-links %}
   <div class="row">
     <div class="col-12 col-md">
-      <img class="mb-2" src="{% static 'doorstep/img/icon.png' %}" alt="" width="24" height="24">
+      <img class="mb-2" src="{% static 'vtmarketplace/img/icon.png' %}" alt="" width="24" height="24">
       <small class="d-block mb-3 text-muted">{{ COPYRIGHT|safe }}</small>
     </div>
 		{% get_pages_links %}
@@ -150,9 +150,9 @@
 </footer>
 {% endblock %}
 {% block scripts %}
-<script src="{% static 'doorstep/scripts/jquery.min.js' %}"></script>
-<script src="{% static 'doorstep/scripts/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'doorstep/scripts/base.js' %}"></script>
+<script src="{% static 'vtmarketplace/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'vtmarketplace/scripts/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'vtmarketplace/scripts/base.js' %}"></script>
 {% javascript 'jquery_ajax' %}
 <script type="text/javascript">
 		$(document).ready(function () {

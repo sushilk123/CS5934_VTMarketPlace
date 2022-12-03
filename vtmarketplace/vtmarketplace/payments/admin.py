@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from doorstep.admin import ModelAdmin
-from doorstep.payments.models import CardIssuer, Gateway, GatewayParam, Transaction, TransactionParam
+from vtmarketplace.admin import ModelAdmin
+from vtmarketplace.payments.models import CardIssuer, Gateway, GatewayParam, Transaction, TransactionParam
 
 
 class CardIssuerAdmin(ModelAdmin):

@@ -1,6 +1,6 @@
 from django import template
 
-from doorstep.pages.models import Link, Page
+from vtmarketplace.pages.models import Link, Page
 
 
 register = template.Library()

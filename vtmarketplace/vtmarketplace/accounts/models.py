@@ -8,7 +8,7 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import AbstractUser as _AbstractUser, UserManager as _UserManager
 
-from doorstep.exceptions import DoorstepError
+from vtmarketplace.exceptions import vtmarketplaceError
 
 
 class UserManager(_UserManager):
@@ -66,7 +66,7 @@ class UserManager(_UserManager):
 
             return user
         except get_user_model().DoesNotExist:
-            raise DoorstepError('We can\'t find that email address, sorry!')
+            raise vtmarketplaceError('We can\'t find that email address, sorry!')
 
     def reset_password(self, user_id, reset_code, password):
         """
@@ -74,12 +74,12 @@ class UserManager(_UserManager):
         """
 
         if not password:
-            raise DoorstepError('New password can\'t be blank.')
+            raise vtmarketplaceError('New password can\'t be blank.')
 
         try:
             user = self.get(id=user_id)
             if not user.reset_code or user.reset_code != reset_code or user.reset_code_expire < timezone.now():
-                raise DoorstepError('Password reset code is invalid or expired.')
+                raise vtmarketplaceError('Password reset code is invalid or expired.')
 
             # Password reset code shouldn't be used again
             user.reset_code = None
@@ -87,7 +87,7 @@ class UserManager(_UserManager):
             user.save()
 
         except get_user_model().DoesNotExist:
-            raise DoorstepError('Password reset code is invalid or expired.')
+            raise vtmarketplaceError('Password reset code is invalid or expired.')
 
     def change_password(self, user, current_password, password):
         """
@@ -95,13 +95,13 @@ class UserManager(_UserManager):
         """
 
         if not password:
-            raise DoorstepError('New password can\'t be blank.')
+            raise vtmarketplaceError('New password can\'t be blank.')
 
         # Changing user's password if old password verifies
         user = self.get(id=user.id)
 
         if not user.check_password(current_password):
-            raise DoorstepError('Your current password is wrong.')
+            raise vtmarketplaceError('Your current password is wrong.')
 
         user.set_password(password)
         user.save()
@@ -109,7 +109,7 @@ class UserManager(_UserManager):
 
 class AbstractUser(_AbstractUser):
     """
-    An abstract class extending Django authentication user model for Doorstep.
+    An abstract class extending Django authentication user model for vtmarketplace.
     """
     MALE = 'M'
     FEMALE = 'F'
@@ -147,5 +147,5 @@ class AbstractUser(_AbstractUser):
 
 class User(AbstractUser):
     """
-    Extends Django authentication user model for Doorstep.
+    Extends Django authentication user model for vtmarketplace.
     """

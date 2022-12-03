@@ -1,12 +1,12 @@
 """
-Doorstep exceptions classes
+vtmarketplace exceptions classes
 """
 
 
-class DoorstepError(Exception):
+class vtmarketplaceError(Exception):
     """
     Creating user which already exist.
     """
 
     def __init__(self, *args, **kwargs):
-        super(DoorstepError, self).__init__(*args, **kwargs)
+        super(vtmarketplaceError, self).__init__(*args, **kwargs)

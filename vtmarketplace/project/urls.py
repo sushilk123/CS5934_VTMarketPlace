@@ -10,8 +10,8 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     
-    # Doorstep urls containing urls for all apps
-    url(r'^', include('doorstep.urls')),
+    # vtmarketplace urls containing urls for all apps
+    url(r'^', include('vtmarketplace.urls')),
 )
 
 # In Debug mode we need to serve media files

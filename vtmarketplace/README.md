@@ -51,7 +51,7 @@ $ python manage.py migrate
 
 ## Setting up VTMarketplace e-commerce as Django App and separate project site
 
-[Doorstep demo](https://github.com/mysteryjeans/doorstep-demo) repository is for quickly getting up and running e-commerce site on your local workstation, its readme contains all steps to setting up a site.
+[vtmarketplace demo](https://github.com/mysteryjeans/vtmarketplace-demo) repository is for quickly getting up and running e-commerce site on your local workstation, its readme contains all steps to setting up a site.
 
 When you have enough testing on prepopulated data in demo projects, starting your own site from scratch is similar to creating project in Django.
 

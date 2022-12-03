@@ -1,6 +1,6 @@
 from django import forms
 
-from doorstep.catalog.models import Manufacturer, Category
+from vtmarketplace.catalog.models import Manufacturer, Category
 
 
 class AdvancedSearchForm(forms.Form):

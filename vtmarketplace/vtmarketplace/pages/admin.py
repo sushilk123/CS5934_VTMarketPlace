@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from doorstep.admin import ModelAdmin
-from doorstep.pages.models import Page, Link
+from vtmarketplace.admin import ModelAdmin
+from vtmarketplace.pages.models import Page, Link
 
 
 class PageAdmin(ModelAdmin):

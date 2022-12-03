@@ -5,14 +5,14 @@ import sys
 from django.core import management
 
 
-def configure_doorstep(project_name):
+def configure_vtmarketplace(project_name):
     """
-    Configures Doorstep settings in project
+    Configures vtmarketplace settings in project
     """
-    import doorstep
+    import vtmarketplace
 
-    doorstep_app_urls_path = os.path.join(
-        os.path.dirname(doorstep.__file__),
+    vtmarketplace_app_urls_path = os.path.join(
+        os.path.dirname(vtmarketplace.__file__),
         'conf', 'project_settings', 'app_urls.py')
 
     project_urls_path = os.path.join(
@@ -22,8 +22,8 @@ def configure_doorstep(project_name):
         'urls.py'
     )
 
-    doorstep_app_settings_path = os.path.join(
-        os.path.dirname(doorstep.__file__),
+    vtmarketplace_app_settings_path = os.path.join(
+        os.path.dirname(vtmarketplace.__file__),
         'conf', 'project_settings', 'app_settings.py')
 
     project_settings_path = os.path.join(
@@ -33,16 +33,16 @@ def configure_doorstep(project_name):
         'settings.py'
     )
 
-    # Dumps all preconfigured settings of Doorstep apps
+    # Dumps all preconfigured settings of vtmarketplace apps
     # into projects settings file
-    with open(doorstep_app_settings_path, "r+") as f:
+    with open(vtmarketplace_app_settings_path, "r+") as f:
         app_settings = f.read()
 
     with open(project_settings_path, 'a+') as f:
         f.write(app_settings)
 
-    # Replaceing project urls.py from Doorstep urls
-    with open(doorstep_app_urls_path, "r+") as f:
+    # Replaceing project urls.py from vtmarketplace urls
+    with open(vtmarketplace_app_urls_path, "r+") as f:
         app_urls = f.read()
 
     with open(project_urls_path, "a+") as f:
@@ -50,8 +50,8 @@ def configure_doorstep(project_name):
 
 
 if __name__ == "__main__":
-    import doorstep
-    project_template = os.path.join(os.path.dirname(doorstep.__file__),
+    import vtmarketplace
+    project_template = os.path.join(os.path.dirname(vtmarketplace.__file__),
         'conf', 'project_template',)
 
     has_template = False
